@@ -7,8 +7,6 @@
 
 <button style="block-size: 20%;background-color: orange;" onclick="A()"><span id="A"></span></button><button style="block-size: 20%;background-color: lime;" onclick="B()"><span id="B"></span></button><br>
 <button style="block-size: 20%;background-color: darkorchid;"  onclick="C()"><span id="C"></span></button><button style="block-size: 20%;background-color: #fffc3a;" onclick="D()"><span id="D"></span></button><br>
-<br>
-Score:&nbsp;<span id="SCORE"></span>
 </div>
 <script>
     document.getElementById("Main").hidden=("True")
@@ -195,38 +193,38 @@ Next()
 
 
     function A(){
+        document.getElementById("Main").hidden=("True")
         if (state.correctanswer == "A"){
-            state.score++;
+           
         }
-        else{state.score--;}
-        Next()
+        
         document.getElementById("SCORE").innerText=(state.score);
     }
 
     function B(){
+        document.getElementById("Main").hidden=("True")
         if (state.correctanswer == "B"){
-            state.score++;
+          
         }
-        else{state.score--;}
-        Next()
+     
         document.getElementById("SCORE").innerText=(state.score);
     }
 
     function C(){
+        document.getElementById("Main").hidden=("True")
         if (state.correctanswer == "C"){
-            state.score++;
+          
         }
-        else{state.score--;}
-        Next()
+       
         document.getElementById("SCORE").innerText=(state.score);
     }
 
     function D(){
+        document.getElementById("Main").hidden=("True")
         if (state.correctanswer == "D"){
-            state.score++;
+           
         }
-        else{state.score--;}
-        Next()
+       
         document.getElementById("SCORE").innerText=(state.score);
     }
 
