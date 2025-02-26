@@ -1,0 +1,270 @@
+<div id="Title Screen">
+<img style="block-size: 20%; " src="Startytydrty.png" alt="START"  onclick="Start()"></img>
+</div>
+<div id="Main">
+<span id="Question"></span><br>
+<br>
+
+<button style="block-size: 20%;background-color: orange;" onclick="A()"><span id="A"></span></button><button style="block-size: 20%;background-color: lime;" onclick="B()"><span id="B"></span></button><br>
+<button style="block-size: 20%;background-color: darkorchid;"  onclick="C()"><span id="C"></span></button><button style="block-size: 20%;background-color: #fffc3a;" onclick="D()"><span id="D"></span></button><br>
+<br>
+Score:&nbsp;<span id="SCORE"></span>
+</div>
+<script>
+    document.getElementById("Main").hidden=("True")
+    function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+    let state = {};
+
+    function Start() {
+        document.getElementById("Title Screen").hidden=true
+        document.getElementById("Main").hidden=false
+    }
+
+
+    state.score = 0
+    document.getElementById("SCORE").innerText=(state.score);
+    state.prev=0
+function Next(){    
+    
+    state.Questionnumber=(getRandomInt(7));
+    
+    while (state.Questionnumber==state.prev){
+    state.Questionnumber=(getRandomInt(7));
+    }
+    state.prev = state.Questionnumber
+
+    if (state.Questionnumber==0){
+        document.getElementById("Question").innerText="What is a part of the digestive tract?"
+        state.places = ["A","B","C","D"]
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="large intestine"
+        state.correctanswer=(state.places[state.chosenplace])
+        state.places.splice(state.chosenplace,1)
+    
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="skull"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="feet"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="No"
+        state.places.splice(state.chosenplace,1)
+    }
+
+    if (state.Questionnumber==1){
+        document.getElementById("Question").innerText="What is the purpose of the stomach?"
+        state.places = ["A","B","C","D"]
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="To chemichly break down food"
+        state.correctanswer=(state.places[state.chosenplace])
+        state.places.splice(state.chosenplace,1)
+    
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="To physicly break down food"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="Nothing"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="To get nutriance out of the food"
+        state.places.splice(state.chosenplace,1)
+    }
+
+    if (state.Questionnumber==2){
+        document.getElementById("Question").innerText="What do plants not need?"
+        state.places = ["A","B","C","D"]
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="Friends"
+        state.correctanswer=(state.places[state.chosenplace])
+        state.places.splice(state.chosenplace,1)
+    
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="Water"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="Sunlight"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="Nutriance"
+        state.places.splice(state.chosenplace,1)
+    }
+
+    if (state.Questionnumber==3){
+        document.getElementById("Question").innerText="Which is not a level of the atmosphere"
+        state.places = ["A","B","C","D"]
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="Mesoshpere"
+        state.places.splice(state.chosenplace,1)
+    
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="biosphere"
+        state.correctanswer=(state.places[state.chosenplace])
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="exosphere"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="troposphere"
+        state.places.splice(state.chosenplace,1)
+    }
+
+    if (state.Questionnumber==4){
+        document.getElementById("Question").innerText="which has salt water"
+        state.places = ["A","B","C","D"]
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="rain"
+        state.places.splice(state.chosenplace,1)
+    
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="ocean"
+        state.correctanswer=(state.places[state.chosenplace])
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="glaciers"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="creeks"
+        state.places.splice(state.chosenplace,1)
+    }
+
+    if (state.Questionnumber==5){
+        document.getElementById("Question").innerText="is not part of the water cycle"
+        state.places = ["A","B","C","D"]
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="precipitation"
+        state.places.splice(state.chosenplace,1)
+    
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="concentration"
+        state.correctanswer=(state.places[state.chosenplace])
+        state.places.splice(state.chosenplace,1)
+ 
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="condencation"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="evaporatiom"
+        state.places.splice(state.chosenplace,1)
+    }
+
+    if (state.Questionnumber==6){
+        document.getElementById("Question").innerText="which word has nothing to do with air"
+        state.places = ["A","B","C","D"]
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="pneumatic"
+        state.places.splice(state.chosenplace,1)
+    
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="Hydraulics"
+        state.correctanswer=(state.places[state.chosenplace])
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="air pressure"
+        state.places.splice(state.chosenplace,1)
+
+        state.chosenplace=(getRandomInt(state.places.length))
+        document.getElementById(state.places[state.chosenplace]).innerText="vacuum"
+        state.places.splice(state.chosenplace,1)
+    }
+
+}
+
+Next()
+
+
+    function A(){
+        if (state.correctanswer == "A"){
+            state.score++;
+        }
+        else{state.score--;}
+        Next()
+        document.getElementById("SCORE").innerText=(state.score);
+    }
+
+    function B(){
+        if (state.correctanswer == "B"){
+            state.score++;
+        }
+        else{state.score--;}
+        Next()
+        document.getElementById("SCORE").innerText=(state.score);
+    }
+
+    function C(){
+        if (state.correctanswer == "C"){
+            state.score++;
+        }
+        else{state.score--;}
+        Next()
+        document.getElementById("SCORE").innerText=(state.score);
+    }
+
+    function D(){
+        if (state.correctanswer == "D"){
+            state.score++;
+        }
+        else{state.score--;}
+        Next()
+        document.getElementById("SCORE").innerText=(state.score);
+    }
+
+</script>
+
+<style>
+
+    body{
+        background-image: url("Snack snail snake.png");
+        background-size: 10;
+        font-size: 50;
+        background-repeat:no-repeat;
+        
+    }
+
+    div{
+    
+        font-size: 50;
+        background-color: rgb(222, 135, 199);
+        background-size: contain;
+        border-color: brown;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 10px;
+        
+
+        
+    }
+
+    text{
+        font-size: 50;
+    }
+    
+    button{
+        width: 400;
+        font-size: 25;
+        height: 450;
+        padding-block: 10;
+    }
+
+</style>
